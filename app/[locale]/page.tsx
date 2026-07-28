@@ -64,33 +64,59 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#EDEAE3] leading-tight max-w-4xl">
-            {t.hero.title}
-          </h1>
-          <p className="mt-6 text-lg text-[#8B8F96] max-w-2xl">
-            {t.hero.subtitle}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="px-6 py-3 bg-[#E7B65C] text-[#14161A] font-medium rounded hover:bg-[#E7B65C]/80 transition-colors"
-            >
-              {t.hero.cta_projects}
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 border border-[#E7B65C] text-[#E7B65C] font-medium rounded hover:bg-[#E7B65C]/10 transition-colors"
-            >
-              {t.hero.cta_contact}
-            </a>
-          </div>
-        </motion.div>
+      <section id="hero" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto overflow-hidden">
+        {/* Background gradient radial subtil */}
+        <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-radial from-[#E7B65C]/5 to-transparent pointer-events-none" />
+        
+        <div className="relative flex flex-col md:flex-row items-center gap-8 lg:gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 z-10"
+          >
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#EDEAE3] leading-tight max-w-4xl">
+              {t.hero.title}
+            </h1>
+            <p className="mt-6 text-lg text-[#8B8F96] max-w-2xl">
+              {t.hero.subtitle}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-[#E7B65C] text-[#14161A] font-medium rounded hover:bg-[#E7B65C]/80 transition-colors"
+              >
+                {t.hero.cta_projects}
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 border border-[#E7B65C] text-[#E7B65C] font-medium rounded hover:bg-[#E7B65C]/10 transition-colors"
+              >
+                {t.hero.cta_contact}
+              </a>
+            </div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative flex-shrink-0 w-full md:w-[45%] lg:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] z-0"
+          >
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#14161A]/20 to-[#14161A] z-10" />
+            <img
+              src="/2.png"
+              alt="Duah Prince Yao AMANKWAAH — Développeur Web"
+              loading="eager"
+              fetchpriority="high"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+              style={{
+                maskImage: 'linear-gradient(to left, transparent 0%, transparent 15%, black 40%, black 100%)',
+                WebkitMaskImage: 'linear-gradient(to left, transparent 0%, transparent 15%, black 40%, black 100%)'
+              }}
+            />
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -352,9 +378,9 @@ export default function HomePage() {
               <div className="p-6 bg-[#14161A] rounded-lg border-l-4 border-[#E7B65C]">
                 <div className="flex items-center gap-4 mb-3">
                   <img 
-                    src="/logo.png" 
-                    alt="AMANKWAAH Logo" 
-                    className="h-12 w-auto"
+                    src="/2.png" 
+                    alt="AMANKWAAH Duah Prince Yao" 
+                    className="h-16 w-16 rounded-full object-cover"
                   />
                   <div>
                     <p className="font-serif text-lg font-semibold text-[#EDEAE3]">

@@ -23,7 +23,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const baseUrl = 'https://your-domain.com'; // [À COMPLÉTER: Remplacer par votre domaine réel]
+const baseUrl = 'https://amankwaah-prince.vercel.app'; // [À COMPLÉTER: Remplacer par votre domaine réel]
 
 export async function generateMetadata({
   params

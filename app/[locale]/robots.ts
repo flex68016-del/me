@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://your-domain.com'; // [À COMPLÉTER: Remplacer par votre domaine réel]
+  const baseUrl = 'https://amankwaah-prince.vercel.app';
 
   return {
     rules: {
