@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useTranslations } from '@/lib/useTranslations';
+import Image from 'next/image';
 
 export default function Header() {
   const t = useTranslations();
@@ -34,11 +35,15 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img 
-              src="/logo.png" 
-              alt="AMANKWAAH Logo" 
-              className="h-10 w-auto"
-            />
+            <div className="relative h-10 w-auto">
+              <Image
+                src="/logo.png"
+                alt="AMANKWAAH Logo"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </div>
             <span className="font-serif font-semibold text-[#EDEAE3]">
               AMANKWAAH
             </span>

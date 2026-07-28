@@ -5,6 +5,7 @@ import { useTranslations } from '@/lib/useTranslations';
 import Header from '@/components/Header';
 import JournalEntry, { JournalEntryProps } from '@/components/JournalEntry';
 import { Mail, MessageCircle, Link, Code } from 'lucide-react';
+import Image from 'next/image';
 
 const projects: JournalEntryProps[] = [
   {
@@ -101,19 +102,15 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex-shrink-0 w-full md:w-[45%] lg:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] z-0"
+            className="relative flex-shrink-0 w-full md:w-[50%] lg:w-[55%] h-[400px] md:h-[500px] lg:h-[600px] z-0"
           >
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#14161A]/20 to-[#14161A] z-10" />
-            <img
+            <Image
               src="/2.png"
               alt="Duah Prince Yao AMANKWAAH — Développeur Web"
-              loading="eager"
-              fetchpriority="high"
-              className="absolute inset-0 w-full h-full object-cover object-top"
-              style={{
-                maskImage: 'linear-gradient(to left, transparent 0%, transparent 15%, black 40%, black 100%)',
-                WebkitMaskImage: 'linear-gradient(to left, transparent 0%, transparent 15%, black 40%, black 100%)'
-              }}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top"
             />
           </motion.div>
         </div>
@@ -377,11 +374,14 @@ export default function HomePage() {
               </div>
               <div className="p-6 bg-[#14161A] rounded-lg border-l-4 border-[#E7B65C]">
                 <div className="flex items-center gap-4 mb-3">
-                  <img 
-                    src="/2.png" 
-                    alt="AMANKWAAH Duah Prince Yao" 
-                    className="h-16 w-16 rounded-full object-cover"
-                  />
+                  <div className="relative h-16 w-16 rounded-full overflow-hidden">
+                    <Image
+                      src="/2.png"
+                      alt="AMANKWAAH Duah Prince Yao"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div>
                     <p className="font-serif text-lg font-semibold text-[#EDEAE3]">
                       AMANKWAAH Duah Prince Yao
