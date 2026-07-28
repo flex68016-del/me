@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg-main: #14161A;
+  --color-bg-card: #1D2024;
+  --color-text-main: #EDEAE3;
+  --color-accent-primary: #E7B65C;
+  --color-accent-secondary: #4E8B7C;
+  --color-accent-in-progress: #C4622D;
+  
+  --font-fraunces: var(--font-fraunces);
+  --font-inter: var(--font-inter);
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-main: var(--color-bg-main);
+  --color-bg-card: var(--color-bg-card);
+  --color-text-main: var(--color-text-main);
+  --color-accent-primary: var(--color-accent-primary);
+  --color-accent-secondary: var(--color-accent-secondary);
+  --color-accent-in-progress: var(--color-accent-in-progress);
+  
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
 }

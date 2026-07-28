@@ -1,0 +1,116 @@
+import type { Metadata } from "next";
+import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import "../globals.css";
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const baseUrl = 'https://your-domain.com'; // [À COMPLÉTER: Remplacer par votre domaine réel]
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  
+  const titles = {
+    fr: 'AMANKWAAH Duah Prince Yao - Développeur Web',
+    en: 'AMANKWAAH Duah Prince Yao - Web Developer'
+  };
+
+  const descriptions = {
+    fr: 'Développeur web autodidacte basé à Lomé, Togo. Next.js, TypeScript, Tailwind. Livraison de produits web réels pour de vraies communautés.',
+    en: 'Self-taught web developer based in Lomé, Togo. Next.js, TypeScript, Tailwind. Delivering real web products for real communities.'
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles],
+    description: descriptions[locale as keyof typeof descriptions],
+    metadataBase: new URL(baseUrl),
+    icons: {
+      icon: '/logo.png',
+      apple: '/logo.png',
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        'fr': `${baseUrl}/fr`,
+        'en': `${baseUrl}/en`,
+      },
+    },
+    openGraph: {
+      title: titles[locale as keyof typeof titles],
+      description: descriptions[locale as keyof typeof descriptions],
+      url: `${baseUrl}/${locale}`,
+      siteName: 'AMANKWAAH Duah Prince Yao',
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[locale as keyof typeof titles],
+      description: descriptions[locale as keyof typeof descriptions],
+    },
+  };
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'AMANKWAAH Duah Prince Yao',
+    jobTitle: locale === 'fr' ? 'Développeur Web' : 'Web Developer',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Lomé',
+      addressCountry: 'TG',
+    },
+    email: 'yao.amankwaah@yahoo.com',
+    url: baseUrl,
+    sameAs: [
+      'https://www.linkedin.com/in/duah-prince-yao-amankwaah/',
+      'https://github.com/flex68016-del',
+    ],
+  };
+
+  return (
+    <html lang={locale} className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-screen bg-[#14161A] text-[#EDEAE3] font-sans antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}
