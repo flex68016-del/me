@@ -11,7 +11,7 @@ const projects: JournalEntryProps[] = [
   {
     title: 'Winterfest Togo 2026',
     status: 'prod',
-    date: '2025-08',
+    date: '2026-06',
     stack: ['HTML/CSS/JS', 'i18n', 'Vercel'],
     role: 'Full Stack',
     liveUrl: 'https://winterfesttogo.org',
@@ -20,7 +20,7 @@ const projects: JournalEntryProps[] = [
   {
     title: 'Flambeau Foot',
     status: 'prod',
-    date: '2025-06',
+    date: '2026-04',
     stack: ['Next.js', 'React', 'Tailwind'],
     role: 'Full Stack',
     liveUrl: 'https://flambeau-foot.vercel.app',
@@ -29,7 +29,7 @@ const projects: JournalEntryProps[] = [
   {
     title: "Flambeau du Réveil",
     status: 'prod',
-    date: '2025-04',
+    date: '2026-04',
     stack: ['Next.js 14', 'TypeScript', 'Tailwind', 'Web3Forms'],
     role: 'Full Stack',
     liveUrl: 'https://flambeaureveil.vercel.app',
@@ -38,7 +38,7 @@ const projects: JournalEntryProps[] = [
   {
     title: 'Portfolio GBO Koami Gnona',
     status: 'prod',
-    date: '2025-03',
+    date: '2026-07',
     stack: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
     role: 'Full Stack',
     liveUrl: 'https://gbokoami.vercel.app',
@@ -47,7 +47,7 @@ const projects: JournalEntryProps[] = [
   {
     title: "Queen's Design",
     status: 'prod',
-    date: '2025-02',
+    date: '2026-07',
     stack: ['HTML/CSS/JS', 'SVG'],
     role: 'Full Stack',
     liveUrl: 'https://queens-design.vercel.app',
