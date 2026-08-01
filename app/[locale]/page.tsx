@@ -9,6 +9,24 @@ import Image from 'next/image';
 
 const projects: JournalEntryProps[] = [
   {
+    title: 'Portfolio GBO Koami Gnona',
+    status: 'prod',
+    date: '2026-07',
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    role: 'Full Stack',
+    liveUrl: 'https://gbokoami.vercel.app',
+    description: 'Portfolio pour un topographe (DGIGC, Lomé). SEO complet (JSON-LD, sitemap, robots, mots-clés locaux).',
+  },
+  {
+    title: "Queen's Design",
+    status: 'prod',
+    date: '2026-07',
+    stack: ['HTML/CSS/JS', 'SVG'],
+    role: 'Full Stack',
+    liveUrl: 'https://queens-design.vercel.app',
+    description: 'Site vitrine pour un studio de formation artisanale à Lomé (@queensdesign). Palette inspirée du textile, CTA WhatsApp, éléments SVG animés.',
+  },
+  {
     title: 'Winterfest Togo 2026',
     status: 'prod',
     date: '2026-06',
@@ -35,30 +53,10 @@ const projects: JournalEntryProps[] = [
     liveUrl: 'https://flambeaureveil.vercel.app',
     description: 'Refonte du site d\'un ministère chrétien. Formulaire de contact, carrousel hero personnalisé.',
   },
-  {
-    title: 'Portfolio GBO Koami Gnona',
-    status: 'prod',
-    date: '2026-07',
-    stack: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
-    role: 'Full Stack',
-    liveUrl: 'https://gbokoami.vercel.app',
-    description: 'Portfolio pour un topographe (DGIGC, Lomé). SEO complet (JSON-LD, sitemap, robots, mots-clés locaux).',
-  },
-  {
-    title: "Queen's Design",
-    status: 'prod',
-    date: '2026-07',
-    stack: ['HTML/CSS/JS', 'SVG'],
-    role: 'Full Stack',
-    liveUrl: 'https://queens-design.vercel.app',
-    description: 'Site vitrine pour un studio de formation artisanale à Lomé (@queensdesign). Palette inspirée du textile, CTA WhatsApp, éléments SVG animés.',
-  },
 ];
 
 export default function HomePage() {
   const t = useTranslations();
-
-  const heroProjects = projects.slice(0, 3);
 
   return (
     <div className="min-h-screen">
@@ -114,22 +112,6 @@ export default function HomePage() {
             />
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-16"
-        >
-          <h2 className="font-mono text-sm text-[#8B8F96] mb-6">
-            {t.hero.recent_deliveries}
-          </h2>
-          <div className="space-y-4">
-            {heroProjects.map((project, index) => (
-              <JournalEntry key={project.title} {...project} index={index} isHero />
-            ))}
-          </div>
-        </motion.div>
       </section>
 
       {/* À PROPOS */}

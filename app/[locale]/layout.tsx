@@ -64,11 +64,20 @@ export async function generateMetadata({
       siteName: 'AMANKWAAH Duah Prince Yao',
       locale: locale,
       type: 'website',
+      images: [
+        {
+          url: '/2.png',
+          width: 1200,
+          height: 630,
+          alt: titles[locale as keyof typeof titles],
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: titles[locale as keyof typeof titles],
       description: descriptions[locale as keyof typeof descriptions],
+      images: ['/2.png'],
     },
   };
 }
