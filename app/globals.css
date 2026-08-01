@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg-main: #14161A;
-  --color-bg-card: #1D2024;
-  --color-text-main: #EDEAE3;
-  --color-accent-primary: #E7B65C;
-  --color-accent-secondary: #4E8B7C;
-  --color-accent-in-progress: #C4622D;
+  --color-void: #0A0C0F;
+  --color-surface: #14161A;
+  --color-paper: #1D2024;
+  --color-gold-dust: #E7B65C;
+  --color-savanna: #4E8B7C;
+  --color-ember: #C4622D;
+  --color-ink: #EDEAE3;
+  --color-mist: #8B8F96;
   
   --font-fraunces: var(--font-fraunces);
   --font-inter: var(--font-inter);
@@ -14,12 +16,13 @@
 }
 
 @theme inline {
-  --color-bg-main: var(--color-bg-main);
-  --color-bg-card: var(--color-bg-card);
-  --color-text-main: var(--color-text-main);
-  --color-accent-primary: var(--color-accent-primary);
-  --color-accent-secondary: var(--color-accent-secondary);
-  --color-accent-in-progress: var(--color-accent-in-progress);
+  --color-bg-main: var(--color-void);
+  --color-bg-card: var(--color-paper);
+  --color-text-main: var(--color-ink);
+  --color-accent-primary: var(--color-gold-dust);
+  --color-accent-secondary: var(--color-savanna);
+  --color-accent-in-progress: var(--color-ember);
+  --color-text-muted: var(--color-mist);
   
   --font-serif: var(--font-fraunces);
   --font-sans: var(--font-inter);

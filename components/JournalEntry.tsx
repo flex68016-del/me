@@ -47,10 +47,18 @@ export default function JournalEntry({
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.4, delay: index * 0.1 }
+    }
+  };
+
+  const badgeVariants = {
+    hidden: { scale: 1 },
+    visible: {
+      scale: [1, 1.05, 1],
+      transition: { duration: 0.5, delay: index * 0.1 + 0.3 }
     }
   };
 
@@ -65,9 +73,14 @@ export default function JournalEntry({
         <span className="font-mono text-sm text-[#8B8F96] flex-shrink-0">
           {date}
         </span>
-        <span className={`${config.color} text-xs px-2 py-0.5 rounded font-mono flex-shrink-0`}>
+        <motion.span
+          variants={isHero ? badgeVariants : undefined}
+          initial={isHero ? 'hidden' : undefined}
+          animate={isHero ? 'visible' : undefined}
+          className={`${config.color} text-xs px-2 py-0.5 rounded font-mono flex-shrink-0`}
+        >
           {config.icon} {config.label}
-        </span>
+        </motion.span>
       </div>
       
       <h3 className="font-serif text-lg font-semibold mt-1 text-[#EDEAE3]">

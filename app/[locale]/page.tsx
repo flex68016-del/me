@@ -80,6 +80,12 @@ export default function HomePage() {
             <p className="mt-6 text-lg text-[#8B8F96] max-w-2xl">
               {t.hero.subtitle}
             </p>
+            <div className="mt-4 inline-flex items-center gap-2 bg-[#1D2024] px-3 py-1.5 rounded-full border border-[#4E8B7C]/30">
+              <span className="text-sm">🟢</span>
+              <span className="font-mono text-sm text-[#4E8B7C]">
+                {projects.filter(p => p.status === 'prod').length} livraisons en prod
+              </span>
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#projects"
@@ -141,64 +147,6 @@ export default function HomePage() {
               </h3>
               <p className="text-[#8B8F96] mt-1">{t.about.ambition}</p>
             </div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* COMPÉTENCES */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="font-serif text-3xl font-semibold text-[#EDEAE3] mb-12">
-            {t.skills.title}
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: t.skills.frontend,
-                items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'HTML/CSS/JS'],
-              },
-              {
-                title: t.skills.integrations,
-                items: ['Supabase', 'Prisma', 'Web3Forms', 'Google Apps Script', 'Mobile Money (Flooz/T-Money)'],
-              },
-              {
-                title: t.skills.seo_i18n,
-                items: ['sitemap.xml', 'robots.txt', 'JSON-LD', 'i18n FR/EN', 'hreflang'],
-              },
-              {
-                title: t.skills.pm,
-                items: ['Découpage en phases', 'Roadmapping', 'Trello'],
-              },
-              {
-                title: t.skills.deployment,
-                items: ['Vercel', 'Netlify', 'Git'],
-              },
-            ].map((skillGroup, index) => (
-              <motion.div
-                key={skillGroup.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#1D2024] p-6 rounded"
-              >
-                <h3 className="font-mono text-sm text-[#E7B65C] mb-4">
-                  {skillGroup.title}
-                </h3>
-                <ul className="space-y-2">
-                  {skillGroup.items.map((item) => (
-                    <li key={item} className="text-[#EDEAE3] text-sm">
-                      • {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </section>
