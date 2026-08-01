@@ -105,11 +105,11 @@ export default function HomePage() {
                 <div>
                   <span className="text-[#FF7B72]">const</span>
                   <span className="text-[#C9D1D9]"> </span>
-                  <span className="text-[#FFA657">AMANKWAAH</span>
+                  <span className="text-[#FFA657]">AMANKWAAH</span>
                   <span className="text-[#C9D1D9]"> </span>
-                  <span className="text-[#FF7B72">=</span>
+                  <span className="text-[#FF7B72]">=</span>
                   <span className="text-[#C9D1D9]"> </span>
-                  <span className="text-[#FF7B72">{`{`}</span>
+                  <span className="text-[#FF7B72]">{`{`}</span>
                 </div>
                 
                 <div className="pl-4">
@@ -178,12 +178,12 @@ export default function HomePage() {
                 </div>
                 <div className="pl-12">
                   <span className="text-[#79C0FF]">tagline</span>
-                  <span className="text-[#C9D1D9">=</span>
+                  <span className="text-[#C9D1D9]">=</span>
                   <span className="text-[#A5D6FF]">"{t.hero.title}"</span>
                 </div>
                 <div className="pl-12">
                   <span className="text-[#79C0FF]">deployed</span>
-                  <span className="text-[#C9D1D9">=</span>
+                  <span className="text-[#C9D1D9]">=</span>
                   <span className="text-[#79C0FF]">{`{${projects.filter(p => p.status === 'prod').length}}`}</span>
                 </div>
                 <div className="pl-8">
@@ -284,9 +284,9 @@ export default function HomePage() {
               <span className="text-[#C9D1D9]"> </span>
               <span className="text-[#FFA657]">tools</span>
               <span className="text-[#C9D1D9]"> </span>
-              <span className="text-[#FF7B72">=</span>
+              <span className="text-[#FF7B72]">=</span>
               <span className="text-[#C9D1D9]"> </span>
-              <span className="text-[#FF7B72">{`{`}</span>
+              <span className="text-[#FF7B72]">{`{`}</span>
             </div>
             
             <div className="pl-4">
@@ -308,7 +308,7 @@ export default function HomePage() {
               <span className="text-[#C9D1D9]"> </span>
               <span className="text-[#FFA657]">location</span>
               <span className="text-[#C9D1D9]"> </span>
-              <span className="text-[#FF7B72">=</span>
+              <span className="text-[#FF7B72]">=</span>
               <span className="text-[#C9D1D9]"> </span>
               <span className="text-[#A5D6FF]">"</span>
               <span className="text-[#C9D1D9]">{t.about.location}</span>
@@ -475,7 +475,7 @@ export default function HomePage() {
                   
                   <div className="pl-8">
                     <span className="text-[#79C0FF]">status</span>
-                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#C9D1D9]">=</span>
                     <span className="text-[#79C0FF]">"</span>
                     <span className="text-[#3FB950]">{project.status === 'prod' ? '✓ Deployed' : '⚠ WIP'}</span>
                     <span className="text-[#79C0FF]">"</span>
@@ -483,7 +483,7 @@ export default function HomePage() {
                   
                   <div className="pl-8">
                     <span className="text-[#79C0FF]">date</span>
-                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#C9D1D9]">=</span>
                     <span className="text-[#79C0FF]">"</span>
                     <span className="text-[#C9D1D9]">{project.date}</span>
                     <span className="text-[#79C0FF]">"</span>
@@ -491,7 +491,7 @@ export default function HomePage() {
                   
                   <div className="pl-8">
                     <span className="text-[#79C0FF]">stack</span>
-                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#C9D1D9]">=</span>
                     <span className="text-[#C9D1D9]">[</span>
                     <span className="text-[#A5D6FF]">{project.stack.map(s => `'${s}'`).join(', ')}</span>
                     <span className="text-[#C9D1D9]">]</span>
@@ -505,7 +505,7 @@ export default function HomePage() {
                   
                   <div className="pl-8">
                     <span className="text-[#79C0FF]">liveUrl</span>
-                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#C9D1D9]">=</span>
                     <span className="text-[#79C0FF]">"</span>
                     {project.liveUrl ? (
                       <a
@@ -683,7 +683,7 @@ export default function HomePage() {
                 <span className="text-[#C9D1D9]"> </span>
                 <span className="text-[#FFA657]">availability</span>
                 <span className="text-[#C9D1D9]"> </span>
-                <span className="text-[#FF7B72">=</span>
+                <span className="text-[#FF7B72]">=</span>
                 <span className="text-[#C9D1D9]"> </span>
                 <span className="text-[#A5D6FF]">"</span>
                 <span className="text-[#3FB950]">{t.contact.availability}</span>
@@ -705,7 +705,7 @@ export default function HomePage() {
                     <span className="text-[#C9D1D9]"> </span>
                     <span className="text-[#FFA657]">name</span>
                     <span className="text-[#C9D1D9]"> </span>
-                    <span className="text-[#FF7B72">=</span>
+                    <span className="text-[#FF7B72]">=</span>
                     <span className="text-[#C9D1D9]"> </span>
                     <span className="text-[#A5D6FF]">"</span>
                     <span className="text-[#C9D1D9]">AMANKWAAH Duah Prince Yao</span>
