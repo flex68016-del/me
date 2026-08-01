@@ -1,25 +1,18 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Rajdhani, Space_Grotesk } from "next/font/google";
 import "../globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const rajdhani = Rajdhani({
+  variable: "--font-rajdhani",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -110,7 +103,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
+    <html lang={locale} className={`${rajdhani.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script
           type="application/ld+json"

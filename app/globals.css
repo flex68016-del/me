@@ -1,32 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --color-void: #0A0C0F;
-  --color-surface: #14161A;
-  --color-paper: #1D2024;
-  --color-gold-dust: #E7B65C;
-  --color-savanna: #4E8B7C;
-  --color-ember: #C4622D;
-  --color-ink: #EDEAE3;
-  --color-mist: #8B8F96;
+  --kente-indigo: #1E3A8A;
+  --gold-wax: #F59E0B;
+  --bogolan-terracotta: #C2410C;
+  --adinkra-charcoal: #1F2937;
+  --weave-cream: #FEF9E7;
+  --circuit-cyan: #0891B2;
   
-  --font-fraunces: var(--font-fraunces);
-  --font-inter: var(--font-inter);
-  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
+  --font-rajdhani: var(--font-rajdhani);
+  --font-space-grotesk: var(--font-space-grotesk);
 }
 
 @theme inline {
-  --color-bg-main: var(--color-void);
-  --color-bg-card: var(--color-paper);
-  --color-text-main: var(--color-ink);
-  --color-accent-primary: var(--color-gold-dust);
-  --color-accent-secondary: var(--color-savanna);
-  --color-accent-in-progress: var(--color-ember);
-  --color-text-muted: var(--color-mist);
+  --color-bg-main: var(--adinkra-charcoal);
+  --color-bg-card: var(--kente-indigo);
+  --color-text-main: var(--weave-cream);
+  --color-accent-primary: var(--gold-wax);
+  --color-accent-secondary: var(--circuit-cyan);
+  --color-accent-tertiary: var(--bogolan-terracotta);
+  --color-text-muted: var(--weave-cream);
   
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-ibm-plex-mono);
+  --font-display: var(--font-rajdhani);
+  --font-sans: var(--font-space-grotesk);
 }
 
 * {
