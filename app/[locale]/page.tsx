@@ -63,29 +63,149 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section id="hero" className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto overflow-hidden">
-        {/* Circuit pattern background */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent" />
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0891B2] to-transparent" />
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent" />
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0891B2] to-transparent" />
+      <section id="hero" className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+        {/* File tabs */}
+        <div className="flex items-center gap-1 mb-0 border-b border-[#30363D] bg-[#161B22] rounded-t-lg overflow-x-auto">
+          <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono whitespace-nowrap">
+            hero.tsx ●
+          </div>
+          <div className="px-4 py-2 text-[#8B949E] text-sm font-mono whitespace-nowrap hover:text-[#C9D1D9] cursor-pointer">
+            about.tsx
+          </div>
+          <div className="px-4 py-2 text-[#8B949E] text-sm font-mono whitespace-nowrap hover:text-[#C9D1D9] cursor-pointer">
+            projects.tsx
+          </div>
+          <div className="px-4 py-2 text-[#8B949E] text-sm font-mono whitespace-nowrap hover:text-[#C9D1D9] cursor-pointer">
+            contact.tsx
+          </div>
         </div>
         
-        <div className="relative">
-          {/* Control module frame */}
-          <div className="border-2 border-[#F59E0B]/30 rounded-lg p-6 md:p-8 bg-[#1E3A8A]/20 backdrop-blur-sm">
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
-              {/* Portrait with geometric frame */}
+        {/* Code editor */}
+        <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-mono text-sm md:text-base"
+          >
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Code content */}
+              <div className="flex-1 space-y-4">
+                <div>
+                  <span className="text-[#FF7B72]">import</span>
+                  <span className="text-[#C9D1D9]"> </span>
+                  <span className="text-[#FFA657]">{`{ Developer }`}</span>
+                  <span className="text-[#C9D1D9]"> </span>
+                  <span className="text-[#FF7B72]">from</span>
+                  <span className="text-[#A5D6FF]"> './profile'</span>
+                </div>
+                
+                <div className="text-[#8B949E]">// Full Stack Developer • Lomé, Togo → Gatineau, Québec</div>
+                
+                <div>
+                  <span className="text-[#FF7B72]">const</span>
+                  <span className="text-[#C9D1D9]"> </span>
+                  <span className="text-[#FFA657">AMANKWAAH</span>
+                  <span className="text-[#C9D1D9]"> </span>
+                  <span className="text-[#FF7B72">=</span>
+                  <span className="text-[#C9D1D9]"> </span>
+                  <span className="text-[#FF7B72">{`{`}</span>
+                </div>
+                
+                <div className="pl-4">
+                  <div>
+                    <span className="text-[#79C0FF]">role</span>
+                    <span className="text-[#C9D1D9]">: </span>
+                    <span className="text-[#A5D6FF]">'Full Stack Developer'</span>
+                    <span className="text-[#8B949E]">,</span>
+                  </div>
+                  <div>
+                    <span className="text-[#79C0FF]">location</span>
+                    <span className="text-[#C9D1D9]">: </span>
+                    <span className="text-[#A5D6FF]">'Lomé, Togo'</span>
+                    <span className="text-[#8B949E]">,</span>
+                  </div>
+                  <div>
+                    <span className="text-[#79C0FF]">stack</span>
+                    <span className="text-[#C9D1D9]">: [</span>
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#A5D6FF]">'Next.js'</span>
+                    <span className="text-[#8B949E]">,</span>
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#A5D6FF]">'TypeScript'</span>
+                    <span className="text-[#8B949E]">,</span>
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#A5D6FF]">'Tailwind'</span>
+                    <span className="text-[#8B949E]">,</span>
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-[#A5D6FF]">'Supabase'</span>
+                  </div>
+                  <div>
+                    <span className="text-[#C9D1D9]">],</span>
+                  </div>
+                  <div>
+                    <span className="text-[#79C0FF]">vibe</span>
+                    <span className="text-[#C9D1D9]">: </span>
+                    <span className="text-[#A5D6FF]">'Windsurf • Cascade • Cursor • VS Code'</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <span className="text-[#C9D1D9]">{`}`}</span>
+                </div>
+                
+                <div className="pt-4">
+                  <span className="text-[#FF7B72]">export</span>
+                  <span className="text-[#FF7B72]"> default</span>
+                  <span className="text-[#FFA657]"> function</span>
+                  <span className="text-[#D2A8FF]"> Portfolio</span>
+                  <span className="text-[#C9D1D9]">() </span>
+                  <span className="text-[#FF7B72">{`{`}</span>
+                </div>
+                
+                <div className="pl-4">
+                  <span className="text-[#FF7B72]">return</span>
+                  <span className="text-[#C9D1D9]"> (</span>
+                </div>
+                
+                <div className="pl-8">
+                  <span className="text-[#FF7B72]">&lt;</span>
+                  <span className="text-[#FFA657]">Hero</span>
+                </div>
+                <div className="pl-12">
+                  <span className="text-[#79C0FF]">tagline</span>
+                  <span className="text-[#C9D1D9">=</span>
+                  <span className="text-[#A5D6FF]">"{t.hero.title}"</span>
+                </div>
+                <div className="pl-12">
+                  <span className="text-[#79C0FF]">deployed</span>
+                  <span className="text-[#C9D1D9">=</span>
+                  <span className="text-[#79C0FF]">{`{${projects.filter(p => p.status === 'prod').length}}`}</span>
+                </div>
+                <div className="pl-8">
+                  <span className="text-[#FF7B72]">/&gt;</span>
+                </div>
+                
+                <div className="pl-4">
+                  <span className="text-[#C9D1D9]">)</span>
+                </div>
+                <div>
+                  <span className="text-[#C9D1D9]">{`}`}</span>
+                </div>
+              </div>
+              
+              {/* Portrait as "import" */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex-shrink-0"
               >
-                <div className="absolute inset-0 border-2 border-[#F59E0B] rounded-lg rotate-3" />
-                <div className="absolute inset-0 border-2 border-[#0891B2] rounded-lg -rotate-3" />
-                <div className="absolute inset-2 overflow-hidden rounded-lg">
+                <div className="border border-[#30363D] rounded-lg overflow-hidden w-48 h-48 md:w-64 md:h-64">
                   <Image
                     src="/2.png"
                     alt="AMANKWAAH Duah Prince Yao"
@@ -95,86 +215,212 @@ export default function HomePage() {
                     className="object-cover"
                   />
                 </div>
-              </motion.div>
-              
-              {/* Content */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex-1 text-center lg:text-left"
-              >
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FEF9E7] leading-tight mb-4">
-                  {t.hero.title}
-                </h1>
-                <p className="text-lg text-[#FEF9E7]/80 max-w-2xl mb-6 font-sans">
-                  {t.hero.subtitle}
-                </p>
-                
-                {/* Stats module */}
-                <div className="inline-flex items-center gap-4 bg-[#1F2937] px-4 py-2 rounded-lg border border-[#F59E0B]/50 mb-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[#F59E0B]">●</span>
-                    <span className="font-display text-sm text-[#FEF9E7]">
-                      {projects.filter(p => p.status === 'prod').length} PROJETS
-                    </span>
-                  </div>
-                  <div className="w-px h-4 bg-[#0891B2]" />
-                  <div className="flex items-center gap-2">
-                    <span className="text-[#0891B2]">●</span>
-                    <span className="font-display text-sm text-[#FEF9E7]">
-                      100% EN PROD
-                    </span>
-                  </div>
-                </div>
-                
-                {/* CTAs */}
-                <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                  <a
-                    href="#projects"
-                    className="px-6 py-3 bg-[#F59E0B] text-[#1F2937] font-display font-semibold rounded hover:bg-[#F59E0B]/80 transition-colors"
-                  >
-                    {t.hero.cta_projects}
-                  </a>
-                  <a
-                    href="#contact"
-                    className="px-6 py-3 border-2 border-[#0891B2] text-[#0891B2] font-display font-semibold rounded hover:bg-[#0891B2]/10 transition-colors"
-                  >
-                    {t.hero.cta_contact}
-                  </a>
-                </div>
+                <div className="text-xs text-[#8B949E] mt-2 font-mono">// import photo from './assets'</div>
               </motion.div>
             </div>
-          </div>
+            
+            {/* CTAs as function calls */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-[#238636] text-[#C9D1D9] font-mono text-sm rounded hover:bg-[#2EA043] transition-colors border border-[#238636]"
+              >
+                exploreProjects()
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 bg-[#1F6FEB] text-[#C9D1D9] font-mono text-sm rounded hover:bg-[#388BFD] transition-colors border border-[#1F6FEB]"
+              >
+                openTerminal()
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* À PROPOS */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1E3A8A]/20">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-6">
-            {t.about.title}
-          </h2>
-          <p className="text-[#FEF9E7]/70 leading-relaxed max-w-3xl mb-8 font-sans">
-            {t.about.description}
-          </p>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="border border-[#1E3A8A]/50 rounded-lg p-4 bg-[#1F2937]/30">
-              <h3 className="font-display text-sm text-[#F59E0B] mb-2">
-                {t.about.tools}
-              </h3>
-              <p className="text-[#FEF9E7] font-sans">{t.about.tools_list}</p>
+          {/* File tab */}
+          <div className="flex items-center gap-1 mb-4 border-b border-[#30363D] bg-[#161B22] rounded-t-lg">
+            <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono">
+              about.tsx ●
             </div>
-            <div className="border border-[#1E3A8A]/50 rounded-lg p-4 bg-[#1F2937]/30">
-              <h3 className="font-display text-sm text-[#F59E0B] mb-2">
-                {t.about.location}
-              </h3>
-              <p className="text-[#FEF9E7]/70 mt-1 font-sans">{t.about.ambition}</p>
+          </div>
+          
+          {/* Code editor */}
+          <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8 font-mono text-sm">
+            <div className="text-[#8B949E] mb-4">// Developer profile & tools</div>
+            
+            <div>
+              <span className="text-[#FF7B72]">interface</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FFA657]">About</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FF7B72">{`{`}</span>
+            </div>
+            
+            <div className="pl-4">
+              <div>
+                <span className="text-[#79C0FF]">description</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#A5D6FF]">"</span>
+                <span className="text-[#C9D1D9]">{t.about.description}</span>
+                <span className="text-[#A5D6FF]">"</span>
+              </div>
+            </div>
+            
+            <div>
+              <span className="text-[#C9D1D9]">{`}`}</span>
+            </div>
+            
+            <div className="mt-6">
+              <span className="text-[#FF7B72]">const</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FFA657]">tools</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FF7B72">=</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FF7B72">{`{`}</span>
+            </div>
+            
+            <div className="pl-4">
+              <div>
+                <span className="text-[#79C0FF]">daily</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#A5D6FF]">"</span>
+                <span className="text-[#C9D1D9]">{t.about.tools_list}</span>
+                <span className="text-[#A5D6FF]">"</span>
+              </div>
+            </div>
+            
+            <div>
+              <span className="text-[#C9D1D9]">{`}`}</span>
+            </div>
+            
+            <div className="mt-6">
+              <span className="text-[#FF7B72]">const</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FFA657]">location</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FF7B72">=</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#A5D6FF]">"</span>
+              <span className="text-[#C9D1D9]">{t.about.location}</span>
+              <span className="text-[#A5D6FF]">"</span>
+            </div>
+            
+            <div className="mt-4 text-[#8B949E]">
+              // {t.about.ambition}
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* COMPÉTENCES */}
+      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* File tab */}
+          <div className="flex items-center gap-1 mb-4 border-b border-[#30363D] bg-[#161B22] rounded-t-lg">
+            <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono">
+              skills.tsx ●
+            </div>
+          </div>
+          
+          {/* Code editor */}
+          <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8 font-mono text-sm">
+            <div className="text-[#8B949E] mb-4">// Technical capabilities</div>
+            
+            <div>
+              <span className="text-[#FF7B72]">interface</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FFA657]">Skills</span>
+              <span className="text-[#C9D1D9]"> </span>
+              <span className="text-[#FF7B72">{`{`}</span>
+            </div>
+            
+            <div className="pl-4">
+              <div>
+                <span className="text-[#79C0FF]">frontend</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#C9D1D9]">[</span>
+                <span className="text-[#A5D6FF]">'Next.js'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'React'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'TypeScript'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Tailwind CSS'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Framer Motion'</span>
+                <span className="text-[#C9D1D9]">]</span>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">integrations</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#C9D1D9]">[</span>
+                <span className="text-[#A5D6FF]">'Supabase'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Prisma'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Web3Forms'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Mobile Money'</span>
+                <span className="text-[#C9D1D9]">]</span>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">seo_i18n</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#C9D1D9]">[</span>
+                <span className="text-[#A5D6FF]">'sitemap.xml'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'robots.txt'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'JSON-LD'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'i18n FR/EN'</span>
+                <span className="text-[#C9D1D9]">]</span>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">pm</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#C9D1D9]">[</span>
+                <span className="text-[#A5D6FF]">'Découpage en phases'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Roadmapping'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Trello'</span>
+                <span className="text-[#C9D1D9]">]</span>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">deployment</span>
+                <span className="text-[#C9D1D9]">: </span>
+                <span className="text-[#C9D1D9]">[</span>
+                <span className="text-[#A5D6FF]">'Vercel'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Netlify'</span>
+                <span className="text-[#8B949E]">,</span>
+                <span className="text-[#A5D6FF]">'Git'</span>
+                <span className="text-[#C9D1D9]">]</span>
+              </div>
+            </div>
+            
+            <div>
+              <span className="text-[#C9D1D9]">{`}`}</span>
             </div>
           </div>
         </motion.div>
@@ -188,13 +434,17 @@ export default function HomePage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-2">
-            {t.projects.title}
-          </h2>
-          <p className="font-sans text-sm text-[#FEF9E7]/70 mb-12">
-            {t.projects.subtitle}
-          </p>
-          <div className="space-y-6">
+          {/* File tab */}
+          <div className="flex items-center gap-1 mb-4 border-b border-[#30363D] bg-[#161B22] rounded-t-lg">
+            <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono">
+              projects.tsx ●
+            </div>
+          </div>
+          
+          {/* Code editor */}
+          <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8 font-mono text-sm space-y-6">
+            <div className="text-[#8B949E]">// Deployed components</div>
+            
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -202,70 +452,87 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
               >
-                {/* Connection line */}
-                {index < projects.length - 1 && (
-                  <div className="absolute left-4 top-16 bottom-0 w-px bg-gradient-to-b from-[#F59E0B] via-[#0891B2] to-transparent" />
-                )}
+                <div>
+                  <span className="text-[#FF7B72]">export</span>
+                  <span className="text-[#FF7B72]"> default</span>
+                  <span className="text-[#FFA657]"> function</span>
+                  <span className="text-[#D2A8FF]"> {project.title.replace(/\s+/g, '')}</span>
+                  <span className="text-[#C9D1D9]">() </span>
+                  <span className="text-[#FF7B72">{`{`}</span>
+                </div>
                 
-                {/* Module card */}
-                <div className="border-2 border-[#1E3A8A]/50 rounded-lg p-6 bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-colors">
-                  <div className="flex items-start gap-4">
-                    {/* Status indicator */}
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#1E3A8A] border-2 border-[#F59E0B] flex items-center justify-center">
-                      <span className="text-[#F59E0B] text-sm">
-                        {project.status === 'prod' ? '●' : '○'}
-                      </span>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="font-display text-sm text-[#0891B2]">
-                          {project.date}
-                        </span>
-                        <span className="px-2 py-0.5 bg-[#C2410C]/20 text-[#C2410C] text-xs font-display rounded">
-                          {project.status === 'prod' ? 'EN PROD' : 'EN COURS'}
-                        </span>
-                      </div>
-                      
-                      <h3 className="font-display text-xl font-bold text-[#FEF9E7] mb-2">
-                        {project.title}
-                      </h3>
-                      
-                      {project.description && (
-                        <p className="text-[#FEF9E7]/70 text-sm mb-4 font-sans">
-                          {project.description}
-                        </p>
-                      )}
-                      
-                      {/* Stack tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="text-xs font-display px-2 py-1 bg-[#1E3A8A]/30 text-[#F59E0B] rounded border border-[#F59E0B]/30"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      {/* Links */}
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-[#0891B2] hover:text-[#0891B2]/80 transition-colors font-display"
-                        >
-                          <span>VOIR EN LIVE</span>
-                          <span>→</span>
-                        </a>
-                      )}
-                    </div>
+                <div className="pl-4">
+                  <div>
+                    <span className="text-[#FF7B72]">return</span>
+                    <span className="text-[#C9D1D9]"> (</span>
                   </div>
+                  
+                  <div className="pl-4">
+                    <span className="text-[#FF7B72]">&lt;</span>
+                    <span className="text-[#FFA657]">Project</span>
+                  </div>
+                  
+                  <div className="pl-8">
+                    <span className="text-[#79C0FF]">status</span>
+                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#79C0FF]">"</span>
+                    <span className="text-[#3FB950]">{project.status === 'prod' ? '✓ Deployed' : '⚠ WIP'}</span>
+                    <span className="text-[#79C0FF]">"</span>
+                  </div>
+                  
+                  <div className="pl-8">
+                    <span className="text-[#79C0FF]">date</span>
+                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#79C0FF]">"</span>
+                    <span className="text-[#C9D1D9]">{project.date}</span>
+                    <span className="text-[#79C0FF]">"</span>
+                  </div>
+                  
+                  <div className="pl-8">
+                    <span className="text-[#79C0FF]">stack</span>
+                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#C9D1D9]">[</span>
+                    <span className="text-[#A5D6FF]">{project.stack.map(s => `'${s}'`).join(', ')}</span>
+                    <span className="text-[#C9D1D9]">]</span>
+                  </div>
+                  
+                  {project.description && (
+                    <div className="pl-8 text-[#8B949E]">
+                      // {project.description}
+                    </div>
+                  )}
+                  
+                  <div className="pl-8">
+                    <span className="text-[#79C0FF]">liveUrl</span>
+                    <span className="text-[#C9D1D9">=</span>
+                    <span className="text-[#79C0FF]">"</span>
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#58A6FF] hover:underline"
+                      >
+                        {project.liveUrl}
+                      </a>
+                    ) : (
+                      <span className="text-[#8B949E]">null</span>
+                    )}
+                    <span className="text-[#79C0FF]">"</span>
+                  </div>
+                  
+                  <div className="pl-4">
+                    <span className="text-[#FF7B72]">/&gt;</span>
+                  </div>
+                  
+                  <div>
+                    <span className="text-[#C9D1D9]">)</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <span className="text-[#C9D1D9]">{`}`}</span>
                 </div>
               </motion.div>
             ))}
@@ -274,20 +541,24 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1E3A8A]/20">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-2">
-            {t.services.title}
-          </h2>
-          <p className="font-sans text-sm text-[#FEF9E7]/70 mb-12">
-            {t.services.subtitle}
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* File tab */}
+          <div className="flex items-center gap-1 mb-4 border-b border-[#30363D] bg-[#161B22] rounded-t-lg">
+            <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono">
+              services.tsx ●
+            </div>
+          </div>
+          
+          {/* Code editor */}
+          <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8 font-mono text-sm">
+            <div className="text-[#8B949E] mb-4">// Available services</div>
+            
             {[
               { title: t.services.service_1_title, desc: t.services.service_1_desc },
               { title: t.services.service_2_title, desc: t.services.service_2_desc },
@@ -302,14 +573,32 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border-2 border-[#1E3A8A]/50 rounded-lg p-6 bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-colors"
+                className="mb-6"
               >
-                <h3 className="font-display text-lg font-bold text-[#FEF9E7] mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-[#FEF9E7]/70 text-sm font-sans">
-                  {service.desc}
-                </p>
+                <div>
+                  <span className="text-[#FF7B72]">function</span>
+                  <span className="text-[#D2A8FF]"> {service.title.replace(/\s+/g, '')}</span>
+                  <span className="text-[#C9D1D9]">(</span>
+                  <span className="text-[#FFA657]">params</span>
+                  <span className="text-[#C9D1D9]">: </span>
+                  <span className="text-[#FFA657]">ServiceParams</span>
+                  <span className="text-[#C9D1D9]">) </span>
+                  <span className="text-[#FF7B72">{`{`}</span>
+                </div>
+                
+                <div className="pl-4">
+                  <div>
+                    <span className="text-[#FF7B72]">return</span>
+                    <span className="text-[#C9D1D9]"> </span>
+                    <span className="text-[#A5D6FF]">"</span>
+                    <span className="text-[#C9D1D9]">{service.desc}</span>
+                    <span className="text-[#A5D6FF]">"</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <span className="text-[#C9D1D9]">{`}`}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -317,99 +606,113 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1E3A8A]/20">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-2">
-            {t.contact.title}
-          </h2>
-          <p className="font-sans text-sm text-[#FEF9E7]/70 mb-12">
-            {t.contact.subtitle}
-          </p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <a
-                href="mailto:yao.amankwaah@yahoo.com"
-                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-all group"
-              >
-                <div className="p-3 bg-[#F59E0B]/10 rounded-lg group-hover:bg-[#F59E0B]/20 transition-colors">
-                  <Mail className="w-5 h-5 text-[#F59E0B]" />
-                </div>
-                <div>
-                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">Email</p>
-                  <p className="text-[#FEF9E7] font-sans">yao.amankwaah@yahoo.com</p>
-                </div>
-              </a>
-              <a
-                href="https://wa.me/22890318714"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#0891B2]/50 transition-all group"
-              >
-                <div className="p-3 bg-[#0891B2]/10 rounded-lg group-hover:bg-[#0891B2]/20 transition-colors">
-                  <MessageCircle className="w-5 h-5 text-[#0891B2]" />
-                </div>
-                <div>
-                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">WhatsApp</p>
-                  <p className="text-[#FEF9E7] font-sans">+228 90 31 87 14</p>
-                </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/duah-prince-yao-amankwaah/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-all group"
-              >
-                <div className="p-3 bg-[#F59E0B]/10 rounded-lg group-hover:bg-[#F59E0B]/20 transition-colors">
-                  <Link className="w-5 h-5 text-[#F59E0B]" />
-                </div>
-                <div>
-                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">LinkedIn</p>
-                  <p className="text-[#FEF9E7] font-sans">linkedin.com/in/duah-prince-yao-amankwaah</p>
-                </div>
-              </a>
-              <a
-                href="https://github.com/flex68016-del"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#0891B2]/50 transition-all group"
-              >
-                <div className="p-3 bg-[#0891B2]/10 rounded-lg group-hover:bg-[#0891B2]/20 transition-colors">
-                  <Code className="w-5 h-5 text-[#0891B2]" />
-                </div>
-                <div>
-                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">GitHub</p>
-                  <p className="text-[#FEF9E7] font-sans">github.com/flex68016-del</p>
-                </div>
-              </a>
+          {/* File tab */}
+          <div className="flex items-center gap-1 mb-4 border-b border-[#30363D] bg-[#161B22] rounded-t-lg">
+            <div className="px-4 py-2 bg-[#0D1117] border-b-2 border-[#58A6FF] text-[#C9D1D9] text-sm font-mono">
+              contact.tsx ●
             </div>
-            <div className="space-y-6">
-              <div className="p-6 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm">
-                <p className="text-[#FEF9E7]/70 leading-relaxed font-sans">
-                  {t.contact.availability}
-                </p>
+          </div>
+          
+          {/* Code editor / Terminal */}
+          <div className="bg-[#0D1117] border border-[#30363D] border-t-0 rounded-b-lg p-6 md:p-8 font-mono text-sm">
+            <div className="text-[#8B949E] mb-4">// Contact commands</div>
+            
+            <div className="space-y-4">
+              <div>
+                <span className="text-[#79C0FF]">$</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <a
+                  href="mailto:yao.amankwaah@yahoo.com"
+                  className="text-[#58A6FF] hover:underline"
+                >
+                  email --to="yao.amankwaah@yahoo.com"
+                </a>
               </div>
-              <div className="p-6 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm border-l-4 border-l-[#F59E0B]">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden border-2 border-[#F59E0B]">
-                    <Image
-                      src="/2.png"
-                      alt="AMANKWAAH Duah Prince Yao"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">$</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <a
+                  href="https://wa.me/22890318714"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#58A6FF] hover:underline"
+                >
+                  whatsapp --number="+22890318714"
+                </a>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">$</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <a
+                  href="https://www.linkedin.com/in/duah-prince-yao-amankwaah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#58A6FF] hover:underline"
+                >
+                  linkedin --profile="duah-prince-yao-amankwaah"
+                </a>
+              </div>
+              
+              <div>
+                <span className="text-[#79C0FF]">$</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <a
+                  href="https://github.com/flex68016-del"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#58A6FF] hover:underline"
+                >
+                  github --user="flex68016-del"
+                </a>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-[#30363D]">
+              <div className="text-[#8B949E] mb-2">// Status</div>
+              <div>
+                <span className="text-[#79C0FF]">const</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <span className="text-[#FFA657]">availability</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <span className="text-[#FF7B72">=</span>
+                <span className="text-[#C9D1D9]"> </span>
+                <span className="text-[#A5D6FF]">"</span>
+                <span className="text-[#3FB950]">{t.contact.availability}</span>
+                <span className="text-[#A5D6FF]">"</span>
+              </div>
+              
+              <div className="mt-4 flex items-center gap-4">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-[#58A6FF]">
+                  <Image
+                    src="/2.png"
+                    alt="AMANKWAAH Duah Prince Yao"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
                   <div>
-                    <p className="font-display text-lg font-bold text-[#FEF9E7]">
-                      AMANKWAAH Duah Prince Yao
-                    </p>
-                    <p className="text-sm text-[#FEF9E7]/70 font-sans">
-                      {t.contact_role}
-                    </p>
+                    <span className="text-[#79C0FF]">const</span>
+                    <span className="text-[#C9D1D9]"> </span>
+                    <span className="text-[#FFA657]">name</span>
+                    <span className="text-[#C9D1D9]"> </span>
+                    <span className="text-[#FF7B72">=</span>
+                    <span className="text-[#C9D1D9]"> </span>
+                    <span className="text-[#A5D6FF]">"</span>
+                    <span className="text-[#C9D1D9]">AMANKWAAH Duah Prince Yao</span>
+                    <span className="text-[#A5D6FF]">"</span>
+                  </div>
+                  <div className="text-[#8B949E]">
+                    // {t.contact_role}
                   </div>
                 </div>
               </div>

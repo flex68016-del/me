@@ -1,28 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --kente-indigo: #1E3A8A;
-  --gold-wax: #F59E0B;
-  --bogolan-terracotta: #C2410C;
-  --adinkra-charcoal: #1F2937;
-  --weave-cream: #FEF9E7;
-  --circuit-cyan: #0891B2;
+  --editor-bg: #0D1117;
+  --sidebar-bg: #161B22;
+  --accent-blue: #58A6FF;
+  --accent-purple: #A371F7;
+  --accent-green: #3FB950;
+  --accent-orange: #D29922;
+  --text-primary: #C9D1D9;
+  --text-dim: #8B949E;
   
-  --font-rajdhani: var(--font-rajdhani);
-  --font-space-grotesk: var(--font-space-grotesk);
-}
-
-@theme inline {
-  --color-bg-main: var(--adinkra-charcoal);
-  --color-bg-card: var(--kente-indigo);
-  --color-text-main: var(--weave-cream);
-  --color-accent-primary: var(--gold-wax);
-  --color-accent-secondary: var(--circuit-cyan);
-  --color-accent-tertiary: var(--bogolan-terracotta);
-  --color-text-muted: var(--weave-cream);
-  
-  --font-display: var(--font-rajdhani);
-  --font-sans: var(--font-space-grotesk);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
+  --font-inter: var(--font-inter);
 }
 
 * {
@@ -34,13 +23,13 @@ html {
 }
 
 body {
-  background-color: var(--color-bg-main);
-  color: var(--color-text-main);
+  background-color: var(--editor-bg);
+  color: var(--text-primary);
 }
 
 a:focus,
 button:focus {
-  outline: 2px solid var(--color-accent-primary);
+  outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
 

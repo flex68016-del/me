@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Rajdhani, Space_Grotesk } from "next/font/google";
+import { JetBrains_Mono, Inter } from "next/font/google";
 import "../globals.css";
 
-const rajdhani = Rajdhani({
-  variable: "--font-rajdhani",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -103,14 +103,14 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className={`${rajdhani.variable} ${spaceGrotesk.variable}`}>
+    <html lang={locale} className={`${jetbrainsMono.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#14161A] text-[#EDEAE3] font-sans antialiased">
+      <body className="min-h-screen bg-[#0D1117] text-[#C9D1D9] font-sans antialiased">
         {children}
       </body>
     </html>
