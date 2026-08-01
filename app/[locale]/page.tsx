@@ -274,17 +274,17 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1E3A8A]/20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-serif text-3xl font-semibold text-[#EDEAE3] mb-2">
+          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-2">
             {t.services.title}
           </h2>
-          <p className="font-mono text-sm text-[#8B8F96] mb-12">
+          <p className="font-sans text-sm text-[#FEF9E7]/70 mb-12">
             {t.services.subtitle}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -302,12 +302,12 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#1D2024] p-6 rounded border-l-2 border-[#E7B65C]"
+                className="border-2 border-[#1E3A8A]/50 rounded-lg p-6 bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-colors"
               >
-                <h3 className="font-serif text-lg font-semibold text-[#EDEAE3] mb-2">
+                <h3 className="font-display text-lg font-bold text-[#FEF9E7] mb-2">
                   {service.title}
                 </h3>
-                <p className="text-[#8B8F96] text-sm">
+                <p className="text-[#FEF9E7]/70 text-sm font-sans">
                   {service.desc}
                 </p>
               </motion.div>
@@ -317,85 +317,85 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1D2024]">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-[#1E3A8A]/20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-serif text-3xl font-semibold text-[#EDEAE3] mb-2">
+          <h2 className="font-display text-3xl font-bold text-[#FEF9E7] mb-2">
             {t.contact.title}
           </h2>
-          <p className="font-mono text-sm text-[#8B8F96] mb-12">
+          <p className="font-sans text-sm text-[#FEF9E7]/70 mb-12">
             {t.contact.subtitle}
           </p>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <a
                 href="mailto:yao.amankwaah@yahoo.com"
-                className="flex items-center gap-4 p-4 bg-[#14161A] rounded-lg hover:bg-[#14161A]/80 transition-all group"
+                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-all group"
               >
-                <div className="p-3 bg-[#E7B65C]/10 rounded-lg group-hover:bg-[#E7B65C]/20 transition-colors">
-                  <Mail className="w-5 h-5 text-[#E7B65C]" />
+                <div className="p-3 bg-[#F59E0B]/10 rounded-lg group-hover:bg-[#F59E0B]/20 transition-colors">
+                  <Mail className="w-5 h-5 text-[#F59E0B]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#8B8F96] font-mono mb-1">Email</p>
-                  <p className="text-[#EDEAE3]">yao.amankwaah@yahoo.com</p>
+                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">Email</p>
+                  <p className="text-[#FEF9E7] font-sans">yao.amankwaah@yahoo.com</p>
                 </div>
               </a>
               <a
                 href="https://wa.me/22890318714"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-[#14161A] rounded-lg hover:bg-[#14161A]/80 transition-all group"
+                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#0891B2]/50 transition-all group"
               >
-                <div className="p-3 bg-[#4E8B7C]/10 rounded-lg group-hover:bg-[#4E8B7C]/20 transition-colors">
-                  <MessageCircle className="w-5 h-5 text-[#4E8B7C]" />
+                <div className="p-3 bg-[#0891B2]/10 rounded-lg group-hover:bg-[#0891B2]/20 transition-colors">
+                  <MessageCircle className="w-5 h-5 text-[#0891B2]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#8B8F96] font-mono mb-1">WhatsApp</p>
-                  <p className="text-[#EDEAE3]">+228 90 31 87 14</p>
+                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">WhatsApp</p>
+                  <p className="text-[#FEF9E7] font-sans">+228 90 31 87 14</p>
                 </div>
               </a>
               <a
                 href="https://www.linkedin.com/in/duah-prince-yao-amankwaah/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-[#14161A] rounded-lg hover:bg-[#14161A]/80 transition-all group"
+                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#F59E0B]/50 transition-all group"
               >
-                <div className="p-3 bg-[#E7B65C]/10 rounded-lg group-hover:bg-[#E7B65C]/20 transition-colors">
-                  <Link className="w-5 h-5 text-[#E7B65C]" />
+                <div className="p-3 bg-[#F59E0B]/10 rounded-lg group-hover:bg-[#F59E0B]/20 transition-colors">
+                  <Link className="w-5 h-5 text-[#F59E0B]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#8B8F96] font-mono mb-1">LinkedIn</p>
-                  <p className="text-[#EDEAE3]">linkedin.com/in/duah-prince-yao-amankwaah</p>
+                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">LinkedIn</p>
+                  <p className="text-[#FEF9E7] font-sans">linkedin.com/in/duah-prince-yao-amankwaah</p>
                 </div>
               </a>
               <a
                 href="https://github.com/flex68016-del"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-[#14161A] rounded-lg hover:bg-[#14161A]/80 transition-all group"
+                className="flex items-center gap-4 p-4 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm hover:border-[#0891B2]/50 transition-all group"
               >
-                <div className="p-3 bg-[#8B8F96]/10 rounded-lg group-hover:bg-[#8B8F96]/20 transition-colors">
-                  <Code className="w-5 h-5 text-[#8B8F96]" />
+                <div className="p-3 bg-[#0891B2]/10 rounded-lg group-hover:bg-[#0891B2]/20 transition-colors">
+                  <Code className="w-5 h-5 text-[#0891B2]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#8B8F96] font-mono mb-1">GitHub</p>
-                  <p className="text-[#EDEAE3]">github.com/flex68016-del</p>
+                  <p className="text-xs text-[#FEF9E7]/70 font-display mb-1">GitHub</p>
+                  <p className="text-[#FEF9E7] font-sans">github.com/flex68016-del</p>
                 </div>
               </a>
             </div>
             <div className="space-y-6">
-              <div className="p-6 bg-[#14161A] rounded-lg">
-                <p className="text-[#8B8F96] leading-relaxed">
+              <div className="p-6 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm">
+                <p className="text-[#FEF9E7]/70 leading-relaxed font-sans">
                   {t.contact.availability}
                 </p>
               </div>
-              <div className="p-6 bg-[#14161A] rounded-lg border-l-4 border-[#E7B65C]">
+              <div className="p-6 border-2 border-[#1E3A8A]/50 rounded-lg bg-[#1F2937]/50 backdrop-blur-sm border-l-4 border-l-[#F59E0B]">
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden">
+                  <div className="relative h-16 w-16 rounded-full overflow-hidden border-2 border-[#F59E0B]">
                     <Image
                       src="/2.png"
                       alt="AMANKWAAH Duah Prince Yao"
@@ -404,10 +404,10 @@ export default function HomePage() {
                     />
                   </div>
                   <div>
-                    <p className="font-serif text-lg font-semibold text-[#EDEAE3]">
+                    <p className="font-display text-lg font-bold text-[#FEF9E7]">
                       AMANKWAAH Duah Prince Yao
                     </p>
-                    <p className="text-sm text-[#8B8F96]">
+                    <p className="text-sm text-[#FEF9E7]/70 font-sans">
                       {t.contact_role}
                     </p>
                   </div>
