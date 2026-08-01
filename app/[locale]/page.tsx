@@ -157,7 +157,6 @@ export default function HomePage() {
               <h3 className="font-mono text-sm text-[#E7B65C] mb-2">
                 {t.about.location}
               </h3>
-              <p className="text-[#EDEAE3]">{t.about.location}</p>
               <p className="text-[#8B8F96] mt-1">{t.about.ambition}</p>
             </div>
           </div>
@@ -387,7 +386,7 @@ export default function HomePage() {
                       AMANKWAAH Duah Prince Yao
                     </p>
                     <p className="text-sm text-[#8B8F96]">
-                      Développeur Web • Lomé, Togo
+                      {t.contact_role}
                     </p>
                   </div>
                 </div>

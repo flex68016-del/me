@@ -70,7 +70,8 @@ export const translations = {
     footer: {
       made_by: 'Conçu et développé par',
       name: 'AMANKWAAH Duah Prince Yao'
-    }
+    },
+    contact_role: 'Développeur Web • Lomé, Togo'
   },
   en: {
     nav: {
@@ -143,6 +144,7 @@ export const translations = {
     footer: {
       made_by: 'Designed and developed by',
       name: 'AMANKWAAH Duah Prince Yao'
-    }
+    },
+    contact_role: 'Web Developer • Lomé, Togo'
   }
 };
